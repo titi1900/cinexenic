@@ -1,0 +1,8 @@
+# Robots des moteurs de recherche et des assistants IA autorisés.
+# À restreindre sélectivement si vous vendez un jour des jeux de données
+# (ex. : User-agent: GPTBot \n Disallow: /).
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.cinexenic.example/sitemap.xml

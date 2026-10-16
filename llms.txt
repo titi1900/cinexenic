@@ -1,0 +1,22 @@
+# Cinexenic
+
+> Cinexenic conçoit un dispositif corporel portable qui transforme le mouvement humain en données exploitables, sans caméra ni infrastructure lourde.
+
+## Faits clés
+- Pas de caméra : seuls des signaux de mouvement inertiels (IMU) sont mesurés, aucune image n'est captée.
+- Premiers usages visés : padel et tennis, santé & suivi du geste, ergonomie / prévention des TMS, création numérique (jeu, VR, avatars).
+- Disponibilité et prix : non fixés, liste d'attente ouverte.
+- Projet accompagné par EuropaTech (Berlin, Allemagne).
+- Données sans image, chiffrement de bout en bout, conformité RGPD stricte.
+
+## Pages
+- [Accueil](https://www.cinexenic.example/): présentation, fonctionnement, usages, questions fréquentes, liste d'attente.
+- [Mentions légales](https://www.cinexenic.example/mentions-legales.html): éditeur, hébergeur (GitHub Pages), propriété intellectuelle.
+- [Politique de confidentialité](https://www.cinexenic.example/confidentialite.html): données collectées, base légale, durées de conservation, transferts hors UE, droits RGPD.
+
+## Questions fréquentes (source : FAQPage du site)
+- Qu'est-ce que Cinexenic ? Un dispositif corporel portable qui transforme le mouvement humain en données exploitables, sans caméra ni infrastructure lourde.
+- Faut-il une caméra ou une salle équipée ? Non. Le dispositif se porte sur soi et mesure le mouvement directement.
+- Pour quels usages ? Sport (tennis, padel), santé & télé-rééducation, ergonomie industrielle, création numérique.
+- Quand pourra-t-on l'acheter ? Les précommandes ouvriront prochainement ; inscription à la liste d'attente pour un accès prioritaire.
+- Les données de mouvement sont-elles protégées ? Aucune image n'est captée ; données anonymisées et conformes au RGPD.
