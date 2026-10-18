@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinexenic: measuring motion without a camera | Wearable body sensor</title>
+<meta name="description" content="Cinexenic is a wear-and-play wearable device that turns human movement into usable data, without any camera. Join the movement.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="theme-color" content="#071C45">
+<meta name="author" content="Cinexenic">
+<!-- LOCAL MODE (file:// or http://localhost) — the domain is not acquired yet.
+     The tags below (canonical, hreflang) require absolute URLs: they are
+     disabled here and will be re-enabled as-is in production, with the
+     real domain as the origin.
+<link rel="canonical" href="https://www.cinexenic.example/en/">
+<link rel="alternate" hreflang="fr" href="https://www.cinexenic.example/">
+<link rel="alternate" hreflang="en" href="https://www.cinexenic.example/en/">
+<link rel="alternate" hreflang="de" href="https://www.cinexenic.example/de/">
+<link rel="alternate" hreflang="x-default" href="https://www.cinexenic.example/">
+-->
+
+<!-- Favicons (assets point to the site root) -->
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+<!-- Open Graph
+     og:url and og:image: relative URLs in local mode,
+     to switch back to absolute in production. -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:site_name" content="Cinexenic">
+<meta property="og:title" content="Cinexenic: measuring motion without a camera">
+<meta property="og:description" content="A wearable device that turns human movement into usable data, without any video infrastructure.">
+<meta property="og:url" content="../">
+<meta property="og:image" content="../og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cinexenic: camera-free body motion sensor">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cinexenic: measuring motion without a camera">
+<meta name="twitter:description" content="A wearable device that turns human movement into usable data, without any video infrastructure.">
+<meta name="twitter:image" content="../og-cover.jpg">
+
+<!-- Security (X-Content-Type-Options: to be configured server-side as an HTTP header) -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'">
+
+<!-- Shared stylesheet (assets live at the site root) -->
+<link rel="stylesheet" href="../assets/theme.css">
+
+<!-- Structured data: Schema.org
+     ⚠️ LOCAL MODE: JSON-LD is disabled (@id values require stable absolute
+     URLs). Re-enable as-is in production, with the real domain.
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.cinexenic.example/#organization",
+      "name": "Cinexenic",
+      "url": "https://www.cinexenic.example/",
+      "logo": "https://www.cinexenic.example/favicon.png",
+      "email": "contact@cinexenic.example",
+      "description": "Cinexenic designs a wearable device that turns human movement into usable data, without any camera or heavy infrastructure.",
+      "knowsAbout": [
+        "Motion capture",
+        "IMU inertial sensors",
+        "Biomechanics",
+        "Motion data",
+        "Embedded AI",
+        "Data protection"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.cinexenic.example/#website",
+      "url": "https://www.cinexenic.example/",
+      "name": "Cinexenic",
+      "inLanguage": ["fr-FR", "en", "de-DE"],
+      "publisher": { "@id": "https://www.cinexenic.example/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.cinexenic.example/en/#webpage",
+      "url": "https://www.cinexenic.example/en/",
+      "name": "Cinexenic: measuring motion without a camera | Wearable body sensor",
+      "inLanguage": "en",
+      "dateModified": "2026-10-18",
+      "isPartOf": { "@id": "https://www.cinexenic.example/#website" },
+      "about": { "@id": "https://www.cinexenic.example/#product" }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.cinexenic.example/#product",
+      "name": "Cinexenic device",
+      "description": "A wear-and-play wearable device that measures human movement without any camera or heavy infrastructure.",
+      "brand": { "@id": "https://www.cinexenic.example/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.cinexenic.example/en/#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Cinexenic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cinexenic is a wearable device that turns human movement into usable data, without any camera or heavy infrastructure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a camera or an equipped room?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The device is worn on the body and measures movement directly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is it used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The first target uses are sports, gesture tracking, RSI prevention and digital creation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When can I buy it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pre-orders will open soon. Join the waiting list."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my motion data protected?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The device captures no images. Strict GDPR compliance."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+-->
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="./index.html" aria-label="Cinexenic, Home">
+      <img src="../logo-72.png" alt="" class="brand-icon" width="36" height="36">
+      Cinexenic
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#fonctionnement">How it works</a>
+      <a href="#usages">Use cases</a>
+      <a href="#confiance">Privacy &amp; GDPR</a>
+      <a href="#equipe">Team</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-gold nav-cta" href="#liste-attente">Contact</a>
+    <!-- Language switch as a dropdown menu, zero JS:
+         each language hard-links to its dedicated index.html file
+         (../index.html FR, en/index.html EN, ../de/index.html DE). -->
+    <details class="lang-switch">
+      <summary aria-label="Language: English">EN ▾</summary>
+      <ul class="lang-menu">
+        <li><a href="../index.html" hreflang="fr" lang="fr">Français</a></li>
+        <li><a href="index.html" hreflang="en" lang="en" aria-current="true">English</a></li>
+        <li><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a></li>
+      </ul>
+    </details>
+    <button class="menu" type="button" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">Menu</button>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+  <section class="hero section-blue-gradient section-video-bg">
+    <video muted loop playsinline preload="none" poster="../hero-poster.webp" class="bg-video" aria-hidden="true" tabindex="-1" disablepictureinpicture>
+      <source src="../hero-bg.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay" aria-hidden="true"></div>
+    <div class="video-grid-overlay" aria-hidden="true"></div>
+
+    <div class="wrap hero-grid hero-content">
+      <div>
+        <span class="badge">Backed by EuropaTech</span>
+        <h1>Measure motion without filming.</h1>
+        <p class="lead">Cinexenic is a wear-and-play wearable device that turns human movement into usable data, without any camera or heavy infrastructure.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#liste-attente">Join the movement</a>
+          <a class="btn btn-line" href="#fonctionnement">See how it works</a>
+        </div>
+      </div>
+      <figure class="demo">
+        <canvas id="demo" width="640" height="420" role="img" aria-label="Animated demo of IMU signals and reconstructed gesture" data-labels="acceleration x|acceleration y|gyroscope z"></canvas>
+        <figcaption>Fully simulated demo: raw signals (left) and reconstructed gesture (right).</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="facts section-light" aria-label="Device principles">
+    <div class="wrap">
+      <ul>
+        <li><strong>One sensor, no camera</strong><span>Only motion is measured — your image stays strictly private.</span></li>
+        <li><strong>Visible raw data</strong><span>See what the sensor records before any AI analysis.</span></li>
+        <li><strong>One device, many uses</strong><span>Sports, health, ergonomics, creation: a single Data infrastructure.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="fonctionnement" class="section-blue-gradient">
+    <div class="wrap">
+      <div class="kicker">Technological Breakthrough</div>
+      <h2>From gesture to data, in three steps</h2>
+      <ol class="steps">
+        <li><h3>Wear</h3><p>Put on the ultra-light device. No camera to set up, no video markers, no studio.</p></li>
+        <li><h3>Move</h3><p>Play, work, train: the embedded sensors continuously record your biomechanics.</p></li>
+        <li><h3>Understand</h3><p>Visualize the raw data, then the gesture scoring on mobile, tablet or a Cloud dashboard.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="usages" class="section-light">
+    <div class="wrap">
+      <div class="kicker">Multi-Sector</div>
+      <h2>One device, high-impact use cases</h2>
+      <p>Select your area of interest to shape the next application modules:</p>
+
+      <!-- Accessible carousel with autoscroll: the 4 use cases remain
+           100 % in the HTML (crawlable by Google and AI bots).
+           Automatic scrolling of 1 s per card, controlled by the
+           play/pause button; pauses on hover, focus and
+           prefers-reduced-motion. Styles: theme.css; logic: assets/home.js. -->
+      <div class="carousel" role="group" aria-roledescription="carousel" aria-label="Cinexenic device use cases">
+        <div class="usage-grid carousel-track" tabindex="0" id="usagesTrack"
+             aria-label="Use case cards — scroll horizontally">
+          <div class="usage">
+            <h3>Padel and Tennis</h3>
+            <p>Analyse your serve, smash and positioning. Compare your gesture with coaches' biomechanical references.</p>
+            <a href="#liste-attente" data-usage="sport-raquette">I'm interested in this sport ↗</a>
+          </div>
+          <div class="usage">
+            <h3>Health &amp; Gesture Tracking</h3>
+            <p>Measure joint range and recovery between two sessions with your physiotherapist.</p>
+            <a href="#liste-attente" data-usage="suivi-geste">I'm interested in health tracking ↗</a>
+          </div>
+          <div class="usage">
+            <h3>Ergonomics &amp; RSI Prevention</h3>
+            <p>Map physical strain and repetitive gestures of industrial operators without any video capture.</p>
+            <a href="#liste-attente" data-usage="ergonomie-tms">I'm interested in ergonomics ↗</a>
+          </div>
+          <div class="usage">
+            <h3>Creation, Games &amp; 3D Avatars</h3>
+            <p>Control a digital avatar, play with your body, stream without cameras or light beacons.</p>
+            <a href="#liste-attente" data-usage="creation-vr">I'm interested in creation ↗</a>
+          </div>
+        </div>
+        <button class="carousel-btn prev" type="button"
+                aria-label="Previous use case" aria-controls="usagesTrack">←</button>
+        <button class="carousel-btn next" type="button"
+                aria-label="Next use case" aria-controls="usagesTrack">→</button>
+        <button class="carousel-toggle" id="carouselToggle" type="button"
+                aria-label="Stop automatic scrolling of the use cases"
+                aria-pressed="true" aria-controls="usagesTrack">
+          <span class="toggle-icon-pause" aria-hidden="true">⏸</span><span class="toggle-icon-play" aria-hidden="true">▶</span>
+        </button>
+      </div>
+
+      <p class="explore-note">Additional R&amp;D tracks: fine craftsmanship apprenticeship, biomechanics research and robotics.</p>
+    </div>
+  </section>
+
+  <section id="confiance" class="section-orange-gradient">
+    <div class="wrap">
+      <div class="kicker">Privacy by Design</div>
+      <h2>Measuring without filming is a design choice</h2>
+      <p>A movement is sensitive personal data. We treat privacy as a core product feature.</p>
+      <div class="principles">
+        <div>
+          <h3>No images</h3>
+          <p>The device only embeds inertial sensors (IMU): no camera, no risk of visual leakage.</p>
+        </div>
+        <div>
+          <h3>Data Sovereignty</h3>
+          <p>We only collect the metrics essential to your use, with end-to-end encryption.</p>
+        </div>
+        <div>
+          <h3>Total Transparency</h3>
+          <p>Storage, governance and data export rights are clearly described from sign-up onwards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="equipe" class="section-light">
+    <div class="wrap">
+      <div class="kicker">The Faces of the Project</div>
+      <h2>A team driven by engineering and biomechanics</h2>
+      <p>Cinexenic was born from the union of embedded electronics, signal processing science and the European innovation ecosystem.</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar" aria-hidden="true">👨‍💻</div>
+          <h3>Founder &amp; CTO</h3>
+          <span class="team-role">Electronics, Automation &amp; Data Engineer</span>
+          <p>Passionate about modelling human movement and designer of the hardware architecture.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" aria-hidden="true">🚀</div>
+          <h3>EuropaTech</h3>
+          <span class="team-role">Incubation &amp; Industrialisation Support</span>
+          <p>Leading European startup hub based in Berlin, supporting Cinexenic.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" aria-hidden="true">🔬</div>
+          <h3>Scientific &amp; Data Committee</h3>
+          <span class="team-role">Biomechanics &amp; AI Algorithms</span>
+          <p>Expert advisors in sports science and signal processing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq section-light">
+    <div class="wrap">
+      <div class="kicker">Faq</div>
+      <h2>Frequently asked questions</h2>
+      <details open>
+        <summary>What is Cinexenic?</summary>
+        <p>Cinexenic is a wearable device that turns human movement into usable data, without any camera or heavy infrastructure.</p>
+      </details>
+      <details>
+        <summary>Do I need a camera or an equipped room?</summary>
+        <p>No. The device is worn on the body and measures movement directly.</p>
+      </details>
+      <details>
+        <summary>What is it used for?</summary>
+        <p>The first target uses are sports, gesture tracking, RSI prevention and digital creation.</p>
+      </details>
+      <details>
+        <summary>When can I buy it?</summary>
+        <p>Pre-orders will open soon. Join the waiting list.</p>
+      </details>
+      <details>
+        <summary>Is my motion data protected?</summary>
+        <p>The device captures no images. Strict GDPR compliance.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="liste-attente" class="signup section-orange-gradient">
+    <div class="wrap signup-grid">
+      <div>
+        <h2>Join the movement</h2>
+        <p>Be notified when pre-orders open and help shape the first application modules.</p>
+      </div>
+      <form action="https://formspree.io/f/VOTRE_ID" method="post">
+        <label><span>Email address</span>
+          <input type="email" name="email" required maxlength="254" autocomplete="email" placeholder="your.email@domain.com">
+        </label>
+        <label><span>Use case you are interested in</span>
+          <select name="usage" id="usage">
+            <option value="sport-raquette">Padel or Tennis</option>
+            <option value="suivi-geste">Health &amp; Gesture tracking</option>
+            <option value="ergonomie-tms">Ergonomics &amp; RSI prevention</option>
+            <option value="creation-vr">Creation, Games &amp; VR</option>
+            <option value="autre">Other custom use case</option>
+          </select>
+        </label>
+        <div class="hp" aria-hidden="true">
+          <label>Do not fill in<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <label class="check">
+          <input type="checkbox" name="consent" required>
+          <span>I agree to be contacted about Cinexenic.</span>
+        </label>
+        <button class="btn btn-gold" type="submit">Join the movement</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Cinexenic — Incubated at EuropaTech</span>
+    <span>
+      <a href="legal-notice.html">Legal notice</a> &nbsp;•&nbsp;
+      <a href="privacy-policy.html">Privacy</a> &nbsp;•&nbsp;
+      <a href="mailto:contact@cinexenic.example">Contact</a>
+    </span>
+  </div>
+</footer>
+<button id="scrollToTopBtn" type="button" aria-label="Back to top of the page" title="Back to top of the page">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+<script src="../assets/common.js" defer></script>
+<script src="../assets/home.js" defer></script>
+</body>
+</html>
