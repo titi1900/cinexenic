@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sitemap Cinexenic — 9 URLs, 3 langues (fr, en, de) avec hreflang croisés.
+     ⚠️ MODE LOCAL : URLs absolues avec domaine placeholder (cinexenic.example)
+     — remplacer par le domaine réel en production.
+     Note : les pages d'accueil utilisent les URLs canoniques de répertoire
+     (/, /en/, /de/) ; en production ces répertoires servent index.html
+     (DirectoryIndex). Si le serveur ne fait PAS de résolution de répertoire,
+     remplacer par /index.html, /en/index.html, /de/index.html partout
+     (loc + hreflang), en gardant une seule forme par page. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Accueil FR -->
+  <url>
+    <loc>https://www.cinexenic.example/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cinexenic.example/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cinexenic.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cinexenic.example/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cinexenic.example/"/>
+  </url>
+
+  <!-- Accueil EN -->
+  <url>
+    <loc>https://www.cinexenic.example/en/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cinexenic.example/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cinexenic.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cinexenic.example/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cinexenic.example/"/>
+  </url>
+
+  <!-- Accueil DE -->
+  <url>
+    <loc>https://www.cinexenic.example/de/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cinexenic.example/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cinexenic.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cinexenic.example/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cinexenic.example/"/>
+  </url>
+
+  <!-- Mentions légales FR -->
+  <url>
+    <loc>https://www.cinexenic.example/mentions-legales.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cinexenic.example/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cinexenic.example/en/legal-notice.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cinexenic.example/de/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cinexenic.example/mentions-legales.html"/>
+  </url>
+
+  <!-- Legal notice EN -->
+  <url>
+    <loc>https://www.cinexenic.example/en/legal-notice.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cinexenic.example/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cinexenic.example/en/legal-notice.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cinexenic.example/de/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cinexenic.example/mentions-legales.html"/>
+  </url>
+
+  <!-- Impressum DE -->
+  <url>
+    <loc>https://www.cinexenic.example/de/impressum.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cinexenic.example/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cinexenic.example/en/legal-notice.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cinexenic.example/de/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cinexenic.example/mentions-legales.html"/>
+  </url>
+
+  <!-- Politique de confidentialité FR -->
+  <url>
+    <loc>https://www.cinexenic.example/confidentialite.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cinexenic.example/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cinexenic.example/en/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cinexenic.example/de/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cinexenic.example/confidentialite.html"/>
+  </url>
+
+  <!-- Privacy policy EN -->
+  <url>
+    <loc>https://www.cinexenic.example/en/privacy-policy.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cinexenic.example/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cinexenic.example/en/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cinexenic.example/de/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cinexenic.example/confidentialite.html"/>
+  </url>
+
+  <!-- Datenschutzerklärung DE -->
+  <url>
+    <loc>https://www.cinexenic.example/de/datenschutz.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.cinexenic.example/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cinexenic.example/en/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cinexenic.example/de/datenschutz.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cinexenic.example/confidentialite.html"/>
+  </url>
+
+</urlset>

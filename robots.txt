@@ -1,0 +1,91 @@
+# robots.txt — Cinexenic
+# Objectif : tout autoriser aux moteurs de recherche et assistants IA,
+# avec les directives utiles au crawl (crawl-delay explicite absent car
+# inutile et ignoré par Google ; pas de piège pour les robots honnêtes).
+#
+# ⚠️ MODE LOCAL : le Sitemap exige une URL absolue — remplacer
+# cinexenic.example par le domaine réel en production.
+# ⚠️ Si vous vendez un jour des jeux de données, bloquer ici les bots
+# d'entraînement (ex. : User-agent: GPTBot puis Disallow: /).
+
+# ── Règle globale : tout le site est crawlable ──
+User-agent: *
+Allow: /
+
+# ── Moteurs de recherche ──
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# ── Index de recherche verticaux (images, actualités) ──
+User-agent: BingPreview
+Allow: /
+
+# ── Assistants IA / moteurs de réponse autorisés explicitement ──
+# (utile : certains de ces bots vérifient leur propre bloc avant la règle globale)
+User-agent: GPTBot            # OpenAI (ChatGPT, recherche)
+Allow: /
+
+User-agent: OAI-SearchBot     # OpenAI — recherche web (cite les sources)
+Allow: /
+
+User-agent: ChatGPT-User      # OpenAI — browsing utilisateur
+Allow: /
+
+User-agent: ClaudeBot         # Anthropic (Claude)
+Allow: /
+
+User-agent: Claude-Web        # Anthropic — browsing utilisateur
+Allow: /
+
+User-agent: anthropic-ai     # Anthropic — ancien UA, conservé pour compatibilité
+Allow: /
+
+User-agent: PerplexityBot     # Perplexity (moteur de réponse)
+Allow: /
+
+User-agent: Perplexity-User   # Perplexity — browsing utilisateur
+Allow: /
+
+User-agent: Google-Extended  # Google — entraînement Gemini (distinct de Googlebot)
+Allow: /
+
+User-agent: Applebot-Extended # Apple — entraînement IA (distinct d'Applebot)
+Allow: /
+
+User-agent: meta-externalagent # Meta — agents IA
+Allow: /
+
+User-agent: Amazonbot         # Amazon — assistant Alexa
+Allow: /
+
+# ── Moteurs de recherche indépendants / éthiques ──
+User-agent: DuckDuckBot       # DuckDuckGo
+Allow: /
+
+User-agent: BraveBot          # Brave Search (et son assistant Leo)
+Allow: /
+
+User-agent: MojeekBot         # Mojeek (index indépendant)
+Allow: /
+
+User-agent: QwantBot         # Qwant (européen)
+Allow: /
+
+User-agent: Startseite-Bot   # MetaGer (allemand — cohérent avec la version DE)
+Allow: /
+
+# ── Robots d'archivage / connaissance ──
+User-agent: CCBot             # Common Crawl (corpus ouvert utilisé par la recherche)
+Allow: /
+
+User-agent: ia_archiver       # Internet Archive (Wayback Machine)
+Allow: /
+
+# ── Plan du site (URL absolue requise) ──
+Sitemap: https://www.cinexenic.example/sitemap.xml

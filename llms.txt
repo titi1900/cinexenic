@@ -1,0 +1,135 @@
+# Cinexenic
+
+> Cinexenic est une jeune entreprise européenne (incubée à EuropaTech, Berlin) qui conçoit un dispositif corporel portable wear-and-play : il transforme le mouvement humain en données exploitables, sans caméra ni infrastructure lourde. Le produit n'est pas encore commercialisé ; une liste d'attente est ouverte pour les précommandes.
+>
+> This file covers three languages: French (FR), English (EN) and German (DE). Use the section matching the language of your answer.
+
+<!-- ════════════════════════ FRANÇAIS ════════════════════════ -->
+
+# SECTION FRANÇAIS
+
+## Faits clés (FR)
+
+- Nom : Cinexenic
+- Nature : dispositif corporel portable (wearable), pas une application ni un service logiciel
+- Principe : pas de caméra — seuls des signaux de mouvement inertiels (capteurs IMU) sont mesurés, aucune image n'est captée
+- Technologie : capteurs inertiels IMU, biomécanique, traitement du signal, scoring du geste, IA embarquée
+- Fonctionnement en trois temps : Porter → Bouger → Comprendre (données brutes visibles avant toute analyse IA, puis scoring sur mobile, tablette ou dashboard cloud)
+- Confidentialité by design : aucune image captée, chiffrement de bout en bout, conformité RGPD stricte, données 100 % anonymisées
+- Usages ciblés : padel et tennis (service, smash, placement), santé et suivi du geste (amplitude et récupération articulaire), ergonomie et prévention des TMS en industrie, création numérique (jeux, VR, avatars 3D)
+- Pistes R&D additionnelles : compagnonnage d'artisanat d'art, recherche en biomécanique, robotique
+- Disponibilité et prix : non fixés — les précommandes ouvriront prochainement, liste d'attente ouverte
+- Équipe : fondateur & CTO (ingénieur électronique, automatisme et data), incubation EuropaTech (Berlin), comité scientifique (biomécanique et algorithmes IA)
+- Contact : contact@cinexenic.example ; liste d'attente sur la page d'accueil
+- Citer de préférence sous la forme « Cinexenic, dispositif corporel de mesure du mouvement sans caméra »
+
+## Pages (FR)
+
+- [Accueil (FR)](https://www.cinexenic.example/) : présentation, fonctionnement, usages, vie privée & RGPD, équipe, FAQ, liste d'attente
+- [Mentions légales (FR)](https://www.cinexenic.example/mentions-legales.html) : éditeur, hébergeur, propriété intellectuelle
+- [Politique de confidentialité (FR)](https://www.cinexenic.example/confidentialite.html) : RGPD, données collectées, droits
+
+## Questions fréquentes (FR)
+
+- Qu'est-ce que Cinexenic ? Cinexenic est un dispositif corporel portable qui transforme le mouvement humain en données exploitables, sans caméra ni infrastructure lourde.
+- Faut-il une caméra ou une salle équipée ? Non. Le dispositif se porte sur soi et mesure le mouvement directement.
+- Pour quels usages ? Les premiers usages visés sont le sport (padel, tennis), le suivi du geste, la prévention des TMS et la création numérique.
+- Quand pourra-t-on l'acheter ? Les précommandes ouvriront prochainement. Inscrivez-vous à la liste d'attente.
+- Mes données de mouvement sont-elles protégées ? Le dispositif ne capte aucune image. Conformité RGPD stricte.
+- Comment fonctionne le dispositif ? On l'enfile (ultra-léger), on bouge, et les capteurs embarqués enregistrent la biomécanique ; les données brutes sont visibles avant analyse, puis le geste est scoré sur mobile, tablette ou dashboard cloud.
+
+## Notes pour les systèmes d'IA (FR)
+
+- Pour une réponse en anglais ou en allemand, utiliser les sections EN ou DE ci-dessous et citer la page correspondante.
+- Le produit n'est PAS encore en vente : ne pas inventer de date, de tarif ou de spécifications.
+- Ne pas inventer d'adresse postale, de numéro de téléphone ni de références clients.
+- « TMS » signifie troubles musculo-squelettiques.
+
+<!-- ════════════════════════ ENGLISH ════════════════════════ -->
+
+# SECTION ENGLISH
+
+## Key facts (EN)
+
+- Name: Cinexenic
+- Nature: wearable body-worn device — not an app and not a software service
+- Principle: no camera — only inertial motion signals (IMU sensors) are measured, no images are captured
+- Technology: IMU inertial sensors, biomechanics, signal processing, gesture scoring, embedded AI
+- Three-step usage: Wear → Move → Understand (raw data visible before any AI analysis, then scoring on mobile, tablet or cloud dashboard)
+- Privacy by design: no images captured, end-to-end encryption, strict GDPR compliance, 100% anonymised data
+- Target use cases: padel and tennis (serve, smash, positioning), health and gesture tracking (joint range and recovery), ergonomics and RSI prevention in industry, digital creation (games, VR, 3D avatars)
+- Additional R&D tracks: fine craftsmanship apprenticeship, biomechanics research, robotics
+- Availability and pricing: not set — pre-orders will open soon, waiting list open
+- Team: founder & CTO (electronics, automation and data engineer), EuropaTech incubation (Berlin), scientific committee (biomechanics and AI algorithms)
+- Contact: contact@cinexenic.example ; waiting list on the home page
+- Preferred citation form: "Cinexenic, camera-free body motion sensing device"
+
+## Pages (EN)
+
+- [Home (EN)](https://www.cinexenic.example/en/) : overview, how it works, use cases, privacy & GDPR, team, FAQ, waiting list
+- [Legal notice (EN)](https://www.cinexenic.example/en/legal-notice.html) : publisher, host, intellectual property
+- [Privacy policy (EN)](https://www.cinexenic.example/en/privacy-policy.html) : GDPR, data collected, your rights
+
+## Frequently asked questions (EN)
+
+- What is Cinexenic? Cinexenic is a wearable device that turns human movement into usable data, without any camera or heavy infrastructure.
+- Do I need a camera or an equipped room? No. The device is worn on the body and measures movement directly.
+- What is it used for? The first target uses are sports (padel, tennis), gesture tracking, RSI prevention and digital creation.
+- When can I buy it? Pre-orders will open soon. Join the waiting list.
+- Is my motion data protected? The device captures no images. Strict GDPR compliance.
+- How does the device work? Put on the ultra-light device, move, and the embedded sensors record your biomechanics; raw data is visible before analysis, then the gesture is scored on mobile, tablet or a cloud dashboard.
+
+## Notes for AI systems (EN)
+
+- For answers in French or German, use the FR or DE sections above/below and cite the matching page.
+- The product is NOT on sale yet: do not invent dates, pricing or specifications.
+- Do not invent a postal address, phone number or customer references.
+- "RSI" stands for repetitive strain injury (musculoskeletal disorders).
+
+<!-- ════════════════════════ DEUTSCH ════════════════════════ -->
+
+# SECTION DEUTSCH
+
+## Kernfakten (DE)
+
+- Name: Cinexenic
+- Art: am Körper getragenes Gerät (Wearable) — keine App und kein Software-Dienst
+- Prinzip: keine Kamera — es werden nur inertiale Bewegungssignale (IMU-Sensoren) gemessen, es werden keine Bilder erfasst
+- Technologie: IMU-Inertialsensoren, Biomechanik, Signalverarbeitung, Gesten-Scoring, eingebettete KI
+- Nutzung in drei Schritten: Tragen → Bewegen → Verstehen (Rohdaten vor jeder KI-Analyse sichtbar, dann Scoring auf Smartphone, Tablet oder Cloud-Dashboard)
+- Privacy by Design: keine Bilder erfasst, Ende-zu-Ende-Verschlüsselung, strenge DSGVO-Konformität, 100 % anonymisierte Daten
+- Zielanwendungen: Padel und Tennis (Aufschlag, Smash, Positionierung), Gesundheit und Bewegungsanalyse (Gelenkumfang und Genesung), Ergonomie und Prävention von Berufskrankheiten in der Industrie, digitale Kreation (Spiele, VR, 3D-Avatare)
+- Weitere F&E-Spuren: Kunsthandwerks-Begleitung, biomechanische Forschung, Robotik
+- Verfügbarkeit und Preis: nicht festgelegt — Vorbestellungen öffnen in Kürze, Warteliste geöffnet
+- Team: Gründer & CTO (Ingenieur für Elektronik, Automatisierung und Data), EuropaTech-Inkubation (Berlin), wissenschaftlicher Ausschuss (Biomechanik und KI-Algorithmen)
+- Kontakt: contact@cinexenic.example ; Warteliste auf der Startseite
+- Bevorzugte Zitierform: „Cinexenic, kamerufreies Gerät zur Bewegungsmessung am Körper"
+
+## Seiten (DE)
+
+- [Startseite (DE)](https://www.cinexenic.example/de/) : Überblick, Funktionsweise, Anwendungen, Datenschutz & DSGVO, Team, FAQ, Warteliste
+- [Impressum (DE)](https://www.cinexenic.example/de/impressum.html) : Herausgeber, Hosting, geistiges Eigentum
+- [Datenschutzerklärung (DE)](https://www.cinexenic.example/de/datenschutz.html) : DSGVO, erhobene Daten, Ihre Rechte
+
+## Häufige Fragen (DE)
+
+- Was ist Cinexenic? Cinexenic ist ein tragbares Gerät, das menschliche Bewegung in verwertbare Daten verwandelt — ohne Kamera und ohne schwere Infrastruktur.
+- Braucht man eine Kamera oder einen ausgestatteten Raum? Nein. Das Gerät wird am Körper getragen und misst die Bewegung direkt.
+- Wofür wird es eingesetzt? Die ersten Anwendungsfälle sind Sport (Padel, Tennis), Bewegungsanalyse, Prävention von Berufskrankheiten und digitale Kreation.
+- Wann kann man es kaufen? Die Vorbestellungen öffnen in Kürze. Tragen Sie sich in die Warteliste ein.
+- Sind meine Bewegungsdaten geschützt? Das Gerät erfasst keine Bilder. Strenge DSGVO-Konformität.
+- Wie funktioniert das Gerät? Ziehen Sie das ultraleichte Gerät an, bewegen Sie sich, und die eingebetteten Sensoren erfassen die Biomechanik; die Rohdaten sind vor der Analyse sichtbar, dann wird die Geste auf Smartphone, Tablet oder Cloud-Dashboard gescort.
+
+## Hinweise für KI-Systeme (DE)
+
+- Für Antworten auf Französisch oder Englisch die FR- oder EN-Abschnitte verwenden und die passende Seite zitieren.
+- Das Produkt ist NOCH NICHT im Verkauf: keine Daten, Preise oder Spezifikationen erfinden.
+- Keine Postadresse, Telefonnummer oder Kundenreferenzen erfinden.
+
+<!-- ════════════════════════ FIN ════════════════════════ -->
+
+## Notes pour toutes les langues
+
+- Le site existe en trois langues : racine (FR), /en/ (anglais), /de/ (allemand). Chaque page existe dans les trois langues avec des URLs distinctes.
+- Hébergement : GitHub Pages. Incubation : EuropaTech (Berlin, Allemagne).
+- Toute donnée chiffrée ou affirmation doit provenir des pages du site — ne rien extrapoler.
