@@ -360,6 +360,20 @@ footer a:hover { text-decoration: underline; }
   .nav-links.is-open { display: flex; }
   .menu { display: block; }
   .nav-cta { display: none; }
+  /* Contact intégré au menu hamburger (le CTA d'entête est masqué en mobile) :
+     présenté comme bouton doré en bas du menu déroulant. */
+  .nav-links .nav-contact {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 11px 18px;
+    background: var(--orange-primary);
+    color: var(--ink);
+    border-radius: 10px;
+    font-weight: 700;
+    text-align: center;
+    align-self: flex-start;
+  }
+  .nav-links .nav-contact:hover { background: #e59700; color: var(--ink); }
   #scrollToTopBtn { bottom: 20px; right: 20px; width: 42px; height: 42px; }
   .legal-card { padding: 24px; }
 }
