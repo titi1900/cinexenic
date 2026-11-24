@@ -46,10 +46,93 @@
 
 <!-- Security (X-Content-Type-Options: to be configured server-side as an HTTP header) -->
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'">
+<!-- MAINTENANCE CSP: 'unsafe-inline' is required while the form's CSS and JS are inline.
+     If you move these blocks to external files, remove 'unsafe-inline'. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'">
 
 <!-- Shared stylesheet (assets live at the site root) -->
 <link rel="stylesheet" href="../assets/theme.css">
+
+<!-- =========================================================================
+     MAINTENANCE — QUALIFICATION FORM STYLES (#qualificationForm)
+     ========================================================================= -->
+<style>
+/* Anti-bot trap (honeypot) positioned off-screen */
+.hp{
+    position:absolute;
+    left:-9999px;
+}
+
+#qualificationForm{
+
+    max-width:700px;
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
+}
+
+/* Excludes checkboxes to preserve their native alignment */
+#qualificationForm input:not([type="checkbox"]),
+#qualificationForm textarea,
+#qualificationForm select{
+
+    width:100%;
+    padding:12px;
+
+    box-sizing:border-box;
+}
+
+#submitBtn{
+
+    padding:14px;
+
+    cursor:pointer;
+}
+
+#submitBtn:disabled{
+
+    opacity:.5;
+    cursor:not-allowed;
+}
+
+#timerBox{
+
+    font-weight:bold;
+    color:#ff6600;
+}
+
+/* Human verification block highlighted in high-visibility blue */
+.human-check{
+
+    background:#EFF6FF;
+    color:#071C45;
+    border:2px solid #2563EB;
+    padding:15px;
+
+    border-radius:8px;
+}
+
+/* Question text in strong blue for immediate readability */
+#captchaQuestion{
+
+    margin:0 0 10px;
+    color:#1D4ED8;
+    font-weight:bold;
+    font-size:1.05rem;
+}
+
+/* Blue border around the answer field for clearer visibility */
+#captchaAnswer{
+
+    border:2px solid #2563EB;
+    background:#FFFFFF;
+    color:#071C45;
+    font-weight:bold;
+}
+</style>
 
 <!-- Structured data: Schema.org
      ⚠️ LOCAL MODE: JSON-LD is disabled (@id values require stable absolute
@@ -364,27 +447,120 @@
         <h2>Join the movement</h2>
         <p>Be notified when pre-orders open and help shape the first application modules.</p>
       </div>
-      <form action="https://formspree.io/f/VOTRE_ID" method="post">
-        <label><span>Email address</span>
-          <input type="email" name="email" required maxlength="254" autocomplete="email" placeholder="your.email@domain.com">
+
+      <!-- =====================================================================
+           MAINTENANCE — QUALIFICATION FORM (FORMSPREE + GITHUB PAGES)
+           - Replace VOTRE_ID with your actual Formspree form ID.
+           - Every field with a `name` attribute is submitted to Formspree.
+           ===================================================================== -->
+      <form id="qualificationForm"
+            action="https://formspree.io/f/VOTRE_ID"
+            method="POST">
+
+        <!-- Subject line of the notification email received via Formspree -->
+        <input type="hidden"
+               name="_subject"
+               value="New Lead Cinexenic (EN)">
+
+        <!-- Honeypot: must stay empty; only filled out by automated bots -->
+        <div class="hp">
+          <label>
+            Do not fill in
+            <input type="text"
+                   name="website"
+                   tabindex="-1"
+                   autocomplete="off">
+          </label>
+        </div>
+
+        <h2>Let's build Cinexenic together</h2>
+
+        <!-- Anti-bot countdown updated every second by the script -->
+        <div id="timerBox">
+          Minimum time before sending: 30 seconds
+        </div>
+
+        <label>
+          Business email *
+          <input type="email"
+                 id="email"
+                 name="email"
+                 required
+                 maxlength="254">
         </label>
-        <label><span>Use case you are interested in</span>
-          <select name="usage" id="usage">
-            <option value="sport-raquette">Padel or Tennis</option>
-            <option value="suivi-geste">Health &amp; Gesture tracking</option>
-            <option value="ergonomie-tms">Ergonomics &amp; RSI prevention</option>
-            <option value="creation-vr">Creation, Games &amp; VR</option>
-            <option value="autre">Other custom use case</option>
+
+        <label>
+          You are:
+          <select name="persona" required>
+            <option value="">Select</option>
+            <option>Athlete</option>
+            <option>Sports coach</option>
+            <option>Physiotherapist</option>
+            <option>HSE Manager</option>
+            <option>Innovation Manager</option>
+            <option>Researcher</option>
+            <option>XR Developer</option>
+            <option>Investor</option>
+            <option>Other</option>
           </select>
         </label>
-        <div class="hp" aria-hidden="true">
-          <label>Do not fill in<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-        </div>
-        <label class="check">
-          <input type="checkbox" name="consent" required>
-          <span>I agree to be contacted about Cinexenic.</span>
+
+        <!-- Primary domain: add or rename <option> items here if needed -->
+        <label>
+          Primary domain
+          <select name="secteur">
+            <option>Sport</option>
+            <option>Health</option>
+            <option>Industry</option>
+            <option>Research</option>
+            <option>XR / Gaming</option>
+            <option>Other</option>
+          </select>
         </label>
-        <button class="btn btn-gold" type="submit">Join now</button>
+
+        <label>
+          Estimated budget
+          <select name="budget">
+            <option>-100 €</option>
+            <option>100-500 €</option>
+            <option>500-2000 €</option>
+            <option>2000-10000 €</option>
+            <option>10000+ €</option>
+          </select>
+        </label>
+
+        <label>
+          Participating in a pilot?
+          <select name="pilot">
+            <option>Yes</option>
+            <option>Maybe</option>
+            <option>No</option>
+          </select>
+        </label>
+
+        <!-- Human verification: arithmetic challenge and wording generated dynamically in JS -->
+        <div class="human-check">
+          <p id="captchaQuestion"></p>
+          <input type="number"
+                 id="captchaAnswer"
+                 required
+                 placeholder="Your answer">
+        </div>
+
+        <label class="check">
+          <input type="checkbox"
+                 required>
+          I agree to be contacted
+          by Cinexenic.
+        </label>
+
+        <button type="submit"
+                id="submitBtn"
+                class="btn btn-gold"
+                disabled>
+          Submit
+        </button>
+
       </form>
     </div>
   </section>
@@ -405,5 +581,291 @@
 </button>
 <script src="../assets/common.js" defer></script>
 <script src="../assets/home.js" defer></script>
+
+<!-- =========================================================================
+     MAINTENANCE — ANTI-SPAM SCRIPT, VALIDATION & LOCAL STORAGE
+     ========================================================================= -->
+<script>
+const form =
+document.getElementById(
+    "qualificationForm"
+);
+
+const submitBtn =
+document.getElementById(
+    "submitBtn"
+);
+
+const timerBox =
+document.getElementById(
+    "timerBox"
+);
+
+// Timestamp captured on load to enforce the minimum completion time
+const startedAt =
+Date.now();
+
+/* ------------------------------------------------------------
+   ANTI-SPAM #1
+   MINIMUM TIME (edit `countdown` to change the delay in seconds)
+   ------------------------------------------------------------ */
+
+let countdown = 30;
+
+const timer =
+setInterval(() => {
+
+    countdown--;
+
+    timerBox.textContent =
+       `Minimum time before sending: ${countdown}s`;
+
+    if(countdown <= 0){
+
+        clearInterval(timer);
+
+        timerBox.textContent =
+            "You can now submit.";
+
+        timerBox.style.color =
+            "green";
+
+        submitBtn.disabled =
+            false;
+    }
+
+},1000);
+
+/* ------------------------------------------------------------
+   ANTI-SPAM #2
+   HUMAN VERIFICATION (operation and wording generated randomly)
+   ------------------------------------------------------------ */
+
+// Randomly picks an operation: addition (+), subtraction (-) or multiplication (×)
+const operationIndex =
+Math.floor(Math.random()*3);
+
+let a =
+Math.floor(Math.random()*10)+1;
+
+let b =
+Math.floor(Math.random()*10)+1;
+
+let symbol = "+";
+let expected = 0;
+
+if(operationIndex === 0){
+
+    symbol = "+";
+    expected = a + b;
+
+}else if(operationIndex === 1){
+
+    // Ensures a non-negative result to avoid negative numbers
+    if(a < b){
+
+        const temp = a;
+        a = b;
+        b = temp;
+    }
+
+    symbol = "-";
+    expected = a - b;
+
+}else{
+
+    // Keeps multiplication factors between 2 and 6 for simple mental math
+    a = Math.floor(Math.random()*5)+2;
+    b = Math.floor(Math.random()*5)+2;
+    symbol = "×";
+    expected = a * b;
+}
+
+// Varies the phrasing on each page load so the prompt is not static
+const templates = [
+
+    `Verification: what is ${a} ${symbol} ${b}?`,
+    `Anti-bot check: how much is ${a} ${symbol} ${b}?`,
+    `Please enter the result of ${a} ${symbol} ${b}:`
+
+];
+
+const chosenTemplate =
+templates[Math.floor(Math.random()*templates.length)];
+
+document
+.getElementById("captchaQuestion")
+.innerText =
+chosenTemplate;
+
+/* ------------------------------------------------------------
+   ANTI-SPAM #3
+   DISPOSABLE EMAILS (add new domains to `blockedDomains` as needed)
+   ------------------------------------------------------------ */
+
+const blockedDomains = [
+
+"mailinator.com",
+"guerrillamail.com",
+"10minutemail.com"
+
+];
+
+/* ------------------------------------------------------------
+   ANTI-SPAM #4
+   URL DETECTION (pattern used to detect web links)
+   ------------------------------------------------------------ */
+
+const urlRegex =
+/http|https|www\./i;
+
+/* ------------------------------------------------------------
+   ANTI-SPAM #5
+   URLS IN TEXT (reusable helper if text fields are added later)
+   ------------------------------------------------------------ */
+
+function containsUrl(text){
+
+   return urlRegex.test(text);
+}
+
+/* ------------------------------------------------------------
+   ANTI-SPAM #6
+   SANITIZATION (strips angle brackets `<` and `>` and trims whitespace)
+   ------------------------------------------------------------ */
+
+function sanitize(value){
+
+    return value
+
+    .replace(/</g,"")
+    .replace(/>/g,"")
+
+    .trim();
+}
+
+/* ------------------------------------------------------------
+   VALIDATION AND SUBMISSION
+   ------------------------------------------------------------ */
+
+form.addEventListener(
+
+"submit",
+
+function(e){
+
+// Prevents native submission until all anti-spam checks pass
+e.preventDefault();
+
+/* --------------------------------------------------------
+   HONEYPOT
+   -------------------------------------------------------- */
+
+const honeypot =
+form.website.value;
+
+if(honeypot !== ""){
+
+    alert("Error.");
+
+    return;
+}
+
+/* --------------------------------------------------------
+   MINIMUM TIME
+   -------------------------------------------------------- */
+
+const duration =
+
+(Date.now()-startedAt)
+/1000;
+
+if(duration < 30){
+
+    alert(
+      "Please take a little more time."
+    );
+
+    return;
+}
+
+/* --------------------------------------------------------
+   HUMAN VERIFICATION
+   -------------------------------------------------------- */
+
+const userAnswer =
+Number(
+document.getElementById(
+"captchaAnswer"
+).value
+);
+
+if(userAnswer !== expected){
+
+    alert(
+    "Incorrect answer."
+    );
+
+    return;
+}
+
+/* --------------------------------------------------------
+   EMAIL
+   -------------------------------------------------------- */
+
+const email =
+
+document
+.getElementById("email")
+.value
+.toLowerCase();
+
+const emailDomain =
+
+email.split("@")[1];
+
+if(
+blockedDomains.includes(
+ emailDomain
+)
+){
+
+   alert(
+   "Email address not accepted."
+   );
+
+   return;
+}
+
+/* --------------------------------------------------------
+   LOCAL SAVE (prepares future personalization in localStorage)
+   -------------------------------------------------------- */
+
+const profile = {
+
+email:
+sanitize(email),
+
+createdAt:
+new Date().toISOString()
+
+};
+
+localStorage.setItem(
+
+"cinexenic-profile",
+
+JSON.stringify(profile)
+
+);
+
+/* --------------------------------------------------------
+   FORMSPREE SUBMISSION (final submit after all checks succeed)
+   -------------------------------------------------------- */
+
+form.submit();
+
+});
+</script>
 </body>
 </html>
